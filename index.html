@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171721">
+  <title>My iPhone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="phone">
+    <div class="wallpaper"></div>
+    <div class="dynamic-island"></div>
+
+    <header class="status-bar">
+      <span id="statusTime">9:41</span>
+      <div class="status-icons">
+        <span>●</span>
+        <span>◕</span>
+        <span class="battery">▰</span>
+      </div>
+    </header>
+
+    <!-- LOCK SCREEN -->
+    <section id="lockScreen" class="screen lock-screen">
+      <div class="lock-top">
+        <div class="date-label" id="lockDate">Monday, October 22</div>
+        <div class="lock-clock" id="lockClock">09:41</div>
+        <p class="lock-subtitle">Have a lovely day ♡</p>
+      </div>
+
+      <div id="lockNotifications" class="lock-notifications">
+        <article class="notification">
+          <div class="notification-icon messages-icon">♡</div>
+          <div class="notification-copy">
+            <div class="notification-heading">
+              <strong>Traveloka</strong>
+              <span>NOW</span>
+            </div>
+            <p>Check-in Information : Mohon konfirmasi kedatangannya.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="lock-bottom">
+        <button class="round-action" id="flashButton" aria-label="Flashlight">ϟ</button>
+        <button class="unlock-button" id="unlockButton" aria-label="Unlock phone">
+          <span class="chevron">⌃</span>
+          <span>Tap to unlock</span>
+        </button>
+        <button class="round-action camera-button" id="cameraButton" aria-label="Camera">◎</button>
+      </div>
+    </section>
+
+    <!-- PASSCODE SCREEN -->
+    <section id="passcodeScreen" class="screen passcode-screen hidden">
+      <button id="backToLock" class="back-button">‹</button>
+      <div class="passcode-content">
+        <div class="passcode-avatar">♡</div>
+        <h2>Enter Passcode</h2>
+        <p>Enter your passcode to continue</p>
+
+        <div id="passcodeDots" class="passcode-dots" aria-label="Passcode length">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <p id="passcodeMessage" class="passcode-message" aria-live="polite"></p>
+
+        <div id="keypad" class="keypad">
+          <button data-digit="1">1</button>
+          <button data-digit="2">2<span>ABC</span></button>
+          <button data-digit="3">3<span>DEF</span></button>
+          <button data-digit="4">4<span>GHI</span></button>
+          <button data-digit="5">5<span>JKL</span></button>
+          <button data-digit="6">6<span>MNO</span></button>
+          <button data-digit="7">7<span>PQRS</span></button>
+          <button data-digit="8">8<span>TUV</span></button>
+          <button data-digit="9">9<span>WXYZ</span></button>
+          <div class="keypad-empty"></div>
+          <button data-digit="0">0</button>
+          <button id="deleteDigit" class="delete-key">⌫</button>
+        </div>
+
+        <button id="emergencyButton" class="emergency-button">Emergency</button>
+      </div>
+    </section>
+
+    <!-- HOME SCREEN -->
+    <section id="homeScreen" class="screen home-screen hidden">
+      <div class="home-greeting">
+        <div>
+          <p id="homeDate">MONDAY, OCTOBER 22</p>
+          <h2><span>♡</span></h2>
+        </div>
+        <button id="profileButton" class="profile-button">SF</button>
+      </div>
+
+      <div class="home-widget">
+        <div class="widget-top">
+          <span>✦ OUR LITTLE SPACE</span>
+          <span id="widgetClock">09:41</span>
+        </div>
+        <h3>There's no we<br>without you and i.</h3>
+        <p>So put your head on my shoulder</p>
+        <div class="widget-decoration">☁︎ ♡</div>
+      </div>
+
+      <div class="apps-grid">
+        <button class="app-item" data-app="messages">
+          
+        </button>
+        <button class="app-item" data-app="photos">
+          
+        </button>
+        <button class="app-item" data-app="music">
+          
+        </button>
+        <button class="app-item" data-app="notes">
+          
+        </button>
+        <button class="app-item" data-app="calendar">
+          <span class="app-icon app-calendar"><small id="calendarMonth">OCT</small><b id="calendarDay">22</b></span>
+          <span>Calendar</span>
+        </button>
+        <button class="app-item" data-app="weather">
+          
+        </button>
+        <button class="app-item" data-app="clock">
+          
+        </button>
+        <button class="app-item" data-app="settings">
+          
+        </button>
+      </div>
+
+      <div class="dock">
+        <button class="app-item" data-app="phone">
+          <span class="app-icon dock-phone">☎</span>
+        </button>
+        <button class="app-item" data-app="messages">
+          <span class="app-icon dock-messages">♡</span>
+        </button>
+        <button class="app-item" data-app="music">
+          <span class="app-icon dock-music">♫</span>
+        </button>
+        <button class="app-item" data-app="photos">
+          <span class="app-icon dock-photos">✿</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- MINI APP WINDOW -->
+    <section id="appScreen" class="screen app-screen hidden">
+      <header class="app-header">
+        <button id="closeApp" class="app-back">‹ Home</button>
+        <h3 id="appTitle">App</h3>
+        <span class="header-spacer"></span>
+      </header>
+      <div id="appContent" class="app-content"></div>
+    </section>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast hidden">
+      <div class="toast-icon">♡</div>
+      <div>
+        <strong id="toastTitle">Notification</strong>
+        <p id="toastMessage"></p>
+      </div>
+    </div>
+
+    <div class="home-indicator" id="homeIndicator"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
